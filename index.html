@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eastside Tobacco | Conyers, GA</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            400: '#FBBF24',
+                            500: '#F59E0B',
+                            600: '#D97706',
+                        },
+                        dark: {
+                            900: '#0B0F17',
+                            800: '#111827',
+                            700: '#1F2937',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-dark-900 text-gray-100 font-sans antialiased min-h-screen flex flex-col pb-16 md:pb-0">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-gradient-to-r from-amber-600 via-gold-500 to-amber-600 text-black font-bold text-center py-2 px-4 text-sm flex items-center justify-center gap-2">
+        <i data-lucide="shield-alert" class="w-4 h-4"></i>
+        <span>21+ Age Restricted | Valid ID Required For Entry & Purchases</span>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-40 bg-dark-800/90 backdrop-blur-md border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="bg-gold-500 text-black p-2 rounded-lg font-black text-xl tracking-wider">ET</div>
+                <div>
+                    <h1 class="font-extrabold text-lg text-white leading-tight">Eastside Tobacco</h1>
+                    <p class="text-xs text-gold-400">Conyers, GA • Salem Rd Area</p>
+                </div>
+            </div>
+
+            <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-gray-300">
+                <a href="#products" class="hover:text-gold-400 transition">Products</a>
+                <a href="#hours" class="hover:text-gold-400 transition">Hours & Location</a>
+                <a href="#reviews" class="hover:text-gold-400 transition">Reviews</a>
+            </nav>
+
+            <a href="tel:7707613631" class="hidden sm:flex items-center gap-2 bg-gold-500 hover:bg-gold-600 text-black font-bold px-4 py-2 rounded-lg transition text-sm">
+                <i data-lucide="phone" class="w-4 h-4"></i>
+                Call Store
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-b from-dark-800 to-dark-900 py-12 md:py-20 border-b border-gray-800 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center md:text-left md:flex items-center justify-between gap-12">
+            <div class="max-w-2xl">
+                <!-- Live Status Badge -->
+                <div id="status-badge" class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold mb-4 bg-gray-800 text-gray-300 border border-gray-700">
+                    <span class="w-2 h-2 rounded-full bg-gray-400"></span> Checking Hours...
+                </div>
+                <h1 class="text-4xl sm:text-5xl font-black text-white tracking-tight mb-4 leading-tight">
+                    Conyers’ Premier Spot for <span class="text-transparent bg-clip-text bg-gradient-to-r from-gold-400 to-amber-500">Vapes, Glass & Smoke</span>
+                </h1>
+                <p class="text-gray-400 text-lg mb-6">
+                    Located right off Eastside Dr SE. Top selections, premium brands, and the best prices in town.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4">
+                    <a href="https://maps.google.com/?q=2020+Eastside+Dr+SE+Suite+207+Conyers+GA+30013" target="_blank" class="w-full sm:w-auto bg-gold-500 hover:bg-gold-600 text-black font-bold px-6 py-3 rounded-xl flex items-center justify-center gap-2 transition">
+                        <i data-lucide="navigation" class="w-5 h-5"></i>
+                        Get Directions
+                    </a>
+                    <a href="#products" class="w-full sm:w-auto bg-dark-700 hover:bg-gray-700 text-white font-bold px-6 py-3 rounded-xl border border-gray-600 flex items-center justify-center gap-2 transition">
+                        <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+                        Browse Items
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Store Card -->
+            <div class="mt-8 md:mt-0 bg-dark-800/80 p-6 rounded-2xl border border-gray-700/60 shadow-xl max-w-sm mx-auto md:w-80 text-left">
+                <h3 class="text-gold-400 font-bold uppercase tracking-wider text-xs mb-3">Quick Details</h3>
+                <div class="space-y-3 text-sm">
+                    <div class="flex items-start gap-3">
+                        <i data-lucide="map-pin" class="w-5 h-5 text-gold-400 shrink-0 mt-0.5"></i>
+                        <div>
+                            <p class="font-bold text-white">2020 Eastside Dr SE, Suite 207</p>
+                            <p class="text-gray-400">Conyers, GA 30013</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <i data-lucide="phone" class="w-5 h-5 text-gold-400 shrink-0"></i>
+                        <a href="tel:7707613631" class="text-white hover:underline font-medium">(770) 761-3631</a>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <i data-lucide="star" class="w-5 h-5 text-gold-400 fill-gold-400 shrink-0"></i>
+                        <span class="text-white font-bold">Local Top Rated Tobacco Shop</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Showcase -->
+    <section id="products" class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+            <div>
+                <h2 class="text-3xl font-extrabold text-white">Shop Categories</h2>
+                <p class="text-gray-400 mt-1">Explore our wide selection in-store</p>
+            </div>
+            
+            <!-- Category Filter Buttons -->
+            <div class="flex gap-2 overflow-x-auto pb-2 scrollbar-none" id="category-filters">
+                <button onclick="filterCategory('all')" class="cat-btn bg-gold-500 text-black px-4 py-2 rounded-lg text-sm font-bold whitespace-nowrap">All</button>
+                <button onclick="filterCategory('vapes')" class="cat-btn bg-dark-700 text-gray-300 hover:text-white px-4 py-2 rounded-lg text-sm font-bold whitespace-nowrap">Disposables & Vapes</button>
+                <button onclick="filterCategory('glass')" class="cat-btn bg-dark-700 text-gray-300 hover:text-white px-4 py-2 rounded-lg text-sm font-bold whitespace-nowrap">Glassware</button>
+                <button onclick="filterCategory('hookah')" class="cat-btn bg-dark-700 text-gray-300 hover:text-white px-4 py-2 rounded-lg text-sm font-bold whitespace-nowrap">Hookah & Shisha</button>
+                <button onclick="filterCategory('cigars')" class="cat-btn bg-dark-700 text-gray-300 hover:text-white px-4 py-2 rounded-lg text-sm font-bold whitespace-nowrap">Cigars & Wraps</button>
+            </div>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="product-grid">
+            <!-- Product Item 1 -->
+            <div class="product-card bg-dark-800 rounded-xl p-5 border border-gray-800 hover:border-gold-500/50 transition" data-cat="vapes">
+                <div class="w-full h-36 bg-dark-700 rounded-lg mb-4 flex items-center justify-center">
+                    <i data-lucide="zap" class="w-12 h-12 text-gold-400"></i>
+                </div>
+                <span class="text-xs font-semibold text-gold-400 uppercase tracking-wider">Disposables</span>
+                <h3 class="text-lg font-bold text-white mt-1">Premium Vape Disposables</h3>
+                <p class="text-xs text-gray-400 mt-2">Geek Bar, RAZ, Lost Mary, Orion, and all top flavor brands in stock.</p>
+            </div>
+
+            <!-- Product Item 2 -->
+            <div class="product-card bg-dark-800 rounded-xl p-5 border border-gray-800 hover:border-gold-500/50 transition" data-cat="glass">
+                <div class="w-full h-36 bg-dark-700 rounded-lg mb-4 flex items-center justify-center">
+                    <i data-lucide="flame" class="w-12 h-12 text-gold-400"></i>
+                </div>
+                <span class="text-xs font-semibold text-gold-400 uppercase tracking-wider">Glassware</span>
+                <h3 class="text-lg font-bold text-white mt-1">Water Pipes & Glass Hand Pieces</h3>
+                <p class="text-xs text-gray-400 mt-2">Durable thick glass, rigs, nectar collectors, and custom accessories.</p>
+            </div>
+
+            <!-- Product Item 3 -->
+            <div class="product-card bg-dark-800 rounded-xl p-5 border border-gray-800 hover:border-gold-500/50 transition" data-cat="hookah">
+                <div class="w-full h-36 bg-dark-700 rounded-lg mb-4 flex items-center justify-center">
+                    <i data-lucide="wind" class="w-12 h-12 text-gold-400"></i>
+                </div>
+                <span class="text-xs font-semibold text-gold-400 uppercase tracking-wider">Hookah</span>
+                <h3 class="text-lg font-bold text-white mt-1">Hookahs, Shisha & Coals</h3>
+                <p class="text-xs text-gray-400 mt-2">Al Fakher, Fumari, quick-light & natural coconut charcoal coals.</p>
+            </div>
+
+            <!-- Product Item 4 -->
+            <div class="product-card bg-dark-800 rounded-xl p-5 border border-gray-800 hover:border-gold-500/50 transition" data-cat="cigars">
+                <div class="w-full h-36 bg-dark-700 rounded-lg mb-4 flex items-center justify-center">
+                    <i data-lucide="box" class="w-12 h-12 text-gold-400"></i>
+                </div>
+                <span class="text-xs font-semibold text-gold-400 uppercase tracking-wider">Cigars & Papers</span>
+                <h3 class="text-lg font-bold text-white mt-1">Papers, Wraps & Humidor Selections</h3>
+                <p class="text-xs text-gray-400 mt-2">RAW, Elements, Backwoods, Dutch Masters, and fresh premium cigars.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hours & Location Section -->
+    <section id="hours" class="py-12 bg-dark-800 border-t border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            
+            <!-- Store Hours -->
+            <div>
+                <h2 class="text-3xl font-extrabold text-white mb-2">Store Hours</h2>
+                <p class="text-gray-400 mb-6">Open 7 days a week to serve the Conyers community.</p>
+
+                <div class="space-y-3 bg-dark-900 p-6 rounded-xl border border-gray-700/50 max-w-lg">
+                    <div class="flex justify-between py-2 border-b border-gray-800 text-sm">
+                        <span class="font-bold text-gray-300">Monday – Thursday</span>
+                        <span class="text-gold-400 font-semibold">10:00 AM – 11:00 PM</span>
+                    </div>
+                    <div class="flex justify-between py-2 border-b border-gray-800 text-sm">
+                        <span class="font-bold text-gray-300">Friday – Saturday</span>
+                        <span class="text-gold-400 font-semibold">10:00 AM – 12:00 AM</span>
+                    </div>
+                    <div class="flex justify-between py-2 text-sm">
+                        <span class="font-bold text-gray-300">Sunday</span>
+                        <span class="text-gold-400 font-semibold">12:00 PM – 8:00 PM</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map & Directions -->
+            <div class="bg-dark-900 p-6 rounded-xl border border-gray-700/50 flex flex-col justify-between">
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-2">Find Us in Conyers</h3>
+                    <p class="text-sm text-gray-400 mb-4">Located at Eastside Drive SE off Salem Rd.</p>
+                    <div class="bg-dark-800 p-4 rounded-lg mb-6">
+                        <p class="font-bold text-white">Eastside Tobacco</p>
+                        <p class="text-sm text-gray-300">2020 Eastside Dr SE, Suite 207</p>
+                        <p class="text-sm text-gray-300">Conyers, GA 30013</p>
+                    </div>
+                </div>
+                
+                <a href="https://maps.google.com/?q=2020+Eastside+Dr+SE+Suite+207+Conyers+GA+30013" target="_blank" class="w-full bg-gold-500 hover:bg-gold-600 text-black font-bold py-3 rounded-lg text-center transition flex items-center justify-center gap-2">
+                    <i data-lucide="map" class="w-5 h-5"></i>
+                    Open in Google Maps
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-extrabold text-white text-center mb-8">What Local Customers Say</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-dark-800 p-6 rounded-xl border border-gray-800">
+                <div class="flex text-gold-400 mb-3">
+                    <i data-lucide="star" class="w-4 h-4 fill-gold-400"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-gold-400"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-gold-400"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-gold-400"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-gold-400"></i>
+                </div>
+                <p class="text-sm text-gray-300 italic mb-4">"Best tobacco shop in Conyers hands down. Always stocked up on my favorite disposables and super friendly staff."</p>
+                <p class="text-xs font-bold text-gold-400">— Local Customer</p>
+            </div>
+
+            <div class="bg-dark-800 p-6 rounded-xl border border-gray-800">
+                <div class="flex text-gold-400 mb-3">
+                    <i data-lucide="star" class="w-4 h-4 fill-gold-400"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-gold-400"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-gold-400"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-gold-400"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-gold-400"></i>
+                </div>
+                <p class="text-sm text-gray-300 italic mb-4">"Great prices and awesome selection of glass and accessories. Very convenient location off Salem Rd."</p>
+                <p class="text-xs font-bold text-gold-400">— Marcus T.</p>
+            </div>
+
+            <div class="bg-dark-800 p-6 rounded-xl border border-gray-800">
+                <div class="flex text-gold-400 mb-3">
+                    <i data-lucide="star" class="w-4 h-4 fill-gold-400"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-gold-400"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-gold-400"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-gold-400"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-gold-400"></i>
+                </div>
+                <p class="text-sm text-gray-300 italic mb-4">"Clean shop, polite people, and they stay open late which is super clutch!"</p>
+                <p class="text-xs font-bold text-gold-400">— Ashley R.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mt-auto bg-dark-800 border-t border-gray-800 py-8 text-center text-xs text-gray-500">
+        <div class="max-w-7xl mx-auto px-4">
+            <p class="font-bold text-gray-400 mb-2">Eastside Tobacco • Conyers, GA</p>
+            <p class="mb-4">2020 Eastside Dr SE, Suite 207, Conyers, GA 30013 | (770) 761-3631</p>
+            <p>&copy; 2026 Eastside Tobacco. All Rights Reserved. Must be 21+ with valid government-issued ID.</p>
+        </div>
+    </footer>
+
+    <!-- Mobile Sticky Navigation Bar -->
+    <div class="fixed bottom-0 left-0 right-0 bg-dark-800/95 backdrop-blur-md border-t border-gray-800 p-3 flex sm:hidden justify-around items-center z-50">
+        <a href="tel:7707613631" class="flex flex-col items-center text-gold-400 font-bold text-xs">
+            <i data-lucide="phone" class="w-5 h-5 mb-1"></i>
+            Call Store
+        </a>
+        <a href="https://maps.google.com/?q=2020+Eastside+Dr+SE+Suite+207+Conyers+GA+30013" target="_blank" class="flex flex-col items-center text-gold-400 font-bold text-xs">
+            <i data-lucide="navigation" class="w-5 h-5 mb-1"></i>
+            Directions
+        </a>
+        <a href="#products" class="flex flex-col items-center text-gray-300 font-bold text-xs">
+            <i data-lucide="shopping-bag" class="w-5 h-5 mb-1"></i>
+            Products
+        </a>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Dynamic Open/Closed Status Logic
+        function updateStoreStatus() {
+            const badge = document.getElementById('status-badge');
+            const now = new Date();
+            const day = now.getDay(); // 0 = Sun, 1 = Mon, ..., 6 = Sat
+            const hour = now.getHours(); // 0 - 23
+
+            let isOpen = false;
+
+            if (day >= 1 && day <= 4) { // Mon - Thu (10am - 11pm)
+                if (hour >= 10 && hour < 23) isOpen = true;
+            } else if (day === 5 || day === 6) { // Fri - Sat (10am - 12am)
+                if (hour >= 10 && hour < 24) isOpen = true;
+            } else if (day === 0) { // Sun (12pm - 8pm)
+                if (hour >= 12 && hour < 20) isOpen = true;
+            }
+
+            if (isOpen) {
+                badge.className = "inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold mb-4 bg-emerald-950/80 text-emerald-400 border border-emerald-800";
+                badge.innerHTML = `<span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Open Now • Closes Late`;
+            } else {
+                badge.className = "inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold mb-4 bg-rose-950/80 text-rose-400 border border-rose-800";
+                badge.innerHTML = `<span class="w-2 h-2 rounded-full bg-rose-400"></span> Closed Now • Opens Daily`;
+            }
+        }
+        updateStoreStatus();
+
+        // Simple Product Filtering Logic
+        function filterCategory(cat) {
+            const cards = document.querySelectorAll('.product-card');
+            const buttons = document.querySelectorAll('.cat-btn');
+
+            buttons.forEach(btn => {
+                btn.className = "cat-btn bg-dark-700 text-gray-300 hover:text-white px-4 py-2 rounded-lg text-sm font-bold whitespace-nowrap";
+            });
+
+            event.target.className = "cat-btn bg-gold-500 text-black px-4 py-2 rounded-lg text-sm font-bold whitespace-nowrap";
+
+            cards.forEach(card => {
+                if (cat === 'all' || card.getAttribute('data-cat') === cat) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
